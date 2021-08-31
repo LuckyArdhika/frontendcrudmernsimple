@@ -16,16 +16,16 @@ export default class EditStudent extends Component {
     this.state = {
       name: '',
       email: '',
-      rollno: '',
-      hostname: ''
+      rollno: ''
+      // hostname: ''
     }
   }
 
   componentDidMount() {
-    let host = window.location.hostname;
-    this.setState({hostname: host})
+    // let host = window.location.hostname;
+    // this.setState({hostname: host})
     const getapi = async () => {
-      await fetch("https://"+host+"/students/edit-student/" + this.props.match.params.id)
+      await fetch("https://apiforfirstcrud.herokuapp.com/students/edit-student/" + this.props.match.params.id)
         .then((response) => response.json())
         .then(Getapi => {
           this.setState({
@@ -62,8 +62,8 @@ export default class EditStudent extends Component {
       rollno: this.state.rollno
     };
 
-    let host = this.state.hostname;
-    fetch("https://"+host+"/students/update-student/" + this.props.match.params.id, {
+    // let host = this.state.hostname;
+    fetch("https://apiforfirstcrud.herokuapp.com/students/update-student/" + this.props.match.params.id, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
