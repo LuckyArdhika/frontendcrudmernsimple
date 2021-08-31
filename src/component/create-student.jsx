@@ -47,7 +47,7 @@ export default class CreateStudent extends Component {
     };
 
     // let host = window.location.hostname; //getting hostname, only can using inside componentDidMount!
-    console.log("Host terdeteksi: "+host)
+    // console.log("Host terdeteksi: "+host)
     const createLink = "https://apiforfirstcrud.herokuapp.com/students/create-student";
     async function postData(url = '', data = {}) {
       // Default options are marked with *
