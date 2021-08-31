@@ -13,11 +13,11 @@ export default class StudentList extends Component {
   }
   
   componentDidMount() {
-    let host = window.location.hostname; //getting hostname, only can using inside componentDidMount!
-    console.log(host);
+    // let host = window.location.hostname; //getting hostname, only can using inside componentDidMount!
+    // console.log(host);
     const getapi = async () => {
       // Storing response
-      await fetch("https://"+host+"/students")
+      await fetch("https://apiforfirstcrud.herokuapp.com/students")
       .then((response) => response.json())
       .then(StudentList => {
         console.log(StudentList);
