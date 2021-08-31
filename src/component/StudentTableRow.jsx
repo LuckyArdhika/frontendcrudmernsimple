@@ -13,8 +13,8 @@ const StudentTableRow = (props) => {
 
     const DeleteStudentConfirmed = (e) => {
         useEffect(() => {
-            let host = window.location.hostname;
-            fetch("https://"+host+"/students/delete-student/" + props.obj._id, {method: 'DELETE'})
+            // let host = window.location.hostname;
+            fetch("https://apiforfirstcrud.herokuapp.com/students/delete-student/" + props.obj._id, {method: 'DELETE'})
             .then((res) => {
                 console.log('Student successfully deleted!')
             }).catch((error) => {
