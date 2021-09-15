@@ -82,7 +82,7 @@ export default class EditStudent extends Component {
 
     // Redirect to Student List 
     // this.props.history.push('/student-list'); // this code not realtime/not reloading after edit
-    window.location.reload(history.push("/")); // this code make your edit showing realtime/reloading after redirect
+    window.location.reload(this.props.history.push("/student-list")); // this code make your edit showing realtime/reloading after redirect
   }
 
 
